@@ -86,7 +86,9 @@
             "SecurityGroupIds":[  
                "sg-8f3345ea"
             ],
-            "AssociatePublicIpAddress":"True",
+            "NetworkInterfaces" :[{
+                 "AssociatePublicIpAddress" : "True"
+            }],
             "Tags":[  
                {  
                   "Key":"Name",
