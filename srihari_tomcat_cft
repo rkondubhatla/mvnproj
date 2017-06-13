@@ -87,7 +87,8 @@
                "sg-8f3345ea"
             ],
             "NetworkInterfaces" :[{
-                 "AssociatePublicIpAddress" : "True"
+                 "AssociatePublicIpAddress" : "True",
+                 "DeviceIndex" : "0"
             }],
             "Tags":[  
                {  
