@@ -1,0 +1,36 @@
+{  
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Description":"AWS CloudFormation Template for EC2 Instance With Security Group",
+   "Resources":{  
+      "EC2Instance":{  
+         "Type":"AWS::EC2::Instance",
+         "Properties":{  
+            "InstanceType":"t2.small",
+            "KeyName":"myweb",
+            "ImageId":"ami-c58c1dd3",
+            "SubnetId":"subnet-362ed241",
+            "SecurityGroupIds":[  
+               "sg-8f3345ea"
+            ],
+            "Tags":[  
+               {  
+                  "Key":"Name",
+                  "Value":"LaunchedFromCFT"
+               }
+            ],
+            "UserData":{  
+               "Fn::Base64":{  
+                  "Fn::Join":[  
+                     "",
+                     [  
+                        "#!/bin/bash -v\n",
+                        "sudo yum update -y\n",
+                        "sudo yum install tomcat8-webapps tomcat8-docs-webapp tomcat8-admin-webapps -y\n",
+                        "sudo service tomcat8 start\n"                     ]
+                  ]
+               }
+            }
+         }
+      }
+    }
+}
