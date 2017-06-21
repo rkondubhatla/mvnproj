@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/share/tomcat8/webapps/sample/demo/
+    destination: /usr/share/tomcat8/webapps/sample/
 hooks:
    BeforeInstall:
      - location: BeforeInstall.sh
