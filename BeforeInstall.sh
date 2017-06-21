@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ec2-user/demo/
-sudo rm -r /home/ec2-user/demo/*
+cd /usr/share/tomcat8/webapps/sample/demo
+sudo rm -r /usr/share/tomcat8/webapps/sample/demo/*
