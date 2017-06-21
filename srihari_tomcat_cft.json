@@ -7,6 +7,7 @@
          "Properties":{  
             "InstanceType":"t2.small",
             "KeyName":"myweb",
+            "IamInstanceProfile":"CodeDeployDemo-EC2-Instance-Profile",
             "ImageId":"ami-643b1972",
             "SubnetId":"subnet-362ed241",
             "SecurityGroupIds":[  
