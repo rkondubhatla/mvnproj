@@ -8,7 +8,7 @@
             "InstanceType":"t2.small",
             "KeyName":"myweb",
             "IamInstanceProfile":"CodeDeployDemo-EC2-Instance-Profile",
-            "ImageId":"ami-643b1972",
+            "ImageId":"ami-2affd73c",
             "SubnetId":"subnet-362ed241",
             "SecurityGroupIds":[  
                "sg-6b323615"
@@ -26,13 +26,6 @@
                      [  
                         "#!/bin/bash -v\n",
                         "sudo yum update -y\n",
-                        "sudo yum install ruby -y\n",
-                        "sudo yum install wget -y\n",
-                        "sudo yum update -y\n",
-                        "cd /home/ec2-user\n",
-                        "wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install\n",
-                        "chmod +x /home/ec2-user/install\n",
-                        "sudo /home/ec2-user/install auto\n",
                         "sudo yum install tomcat8-webapps tomcat8-docs-webapp tomcat8-admin-webapps -y\n",
                         "sudo service tomcat8 start\n"                     ]
                   ]
